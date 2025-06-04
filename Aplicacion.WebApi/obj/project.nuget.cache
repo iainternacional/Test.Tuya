@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "phcb/QgcOlLFS5V0OCFnGzPD5F3hP7Pj7rKb6toz+VX/ANMhsrhvjwn301LgDrnaG6uq2YZ9K2NJBQJudlOCRQ==",
+  "dgSpecHash": "cH+avNeVOi0X1jfaT8wq3AMuiZ8XmkYtVlpIzonYtL1GgB2y0pxCFW2PJCPYA84zsDHcks1QbIE4BUBZOxKaYw==",
   "success": true,
   "projectFilePath": "C:\\Users\\sistemas8\\Desktop\\Test\\Test_Tuya\\Aplicacion.WebApi\\Aplicacion.WebApi.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\sistemas8\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

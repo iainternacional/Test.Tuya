@@ -3,7 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplicacion.WebApi", "Aplicacion.WebApi\Aplicacion.WebApi.csproj", "{AC06DD6C-4A8C-4DFC-8320-9B2E084F5D81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aplicacion.WebApi", "Aplicacion.WebApi\Aplicacion.WebApi.csproj", "{AC06DD6C-4A8C-4DFC-8320-9B2E084F5D81}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0C836194-C860-4E34-9043-424183F1F3DD} = {0C836194-C860-4E34-9043-424183F1F3DD}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Presentation", "4. Presentation", "{516C8DDC-A746-4B36-962F-B268EE55C019}"
 EndProject
@@ -11,13 +14,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Application", "2. Applic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Infrastructure", "3. Infrastructure", "{98226143-D64D-43D0-A864-226333940C90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Tuya.Application", "Test_Tuya.Application\Test_Tuya.Application.csproj", "{7066ECB2-5AEC-4D86-BA99-3667D4149C55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Tuya.Application", "Test_Tuya.Application\Test_Tuya.Application.csproj", "{7066ECB2-5AEC-4D86-BA99-3667D4149C55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Tuya.Infrastructure", "Test_Tuya.Infrastructure\Test_Tuya.Infrastructure.csproj", "{0C836194-C860-4E34-9043-424183F1F3DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Tuya.Infrastructure", "Test_Tuya.Infrastructure\Test_Tuya.Infrastructure.csproj", "{0C836194-C860-4E34-9043-424183F1F3DD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Domain", "1. Domain", "{46A377BE-0FE0-449A-9949-2ABC9FE1EF0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Tuya.Domain", "Test_Tuya.Domain\Test_Tuya.Domain.csproj", "{4E1A5995-A86E-4CEE-9F00-F24FC4B1C09A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Tuya.Domain", "Test_Tuya.Domain\Test_Tuya.Domain.csproj", "{4E1A5995-A86E-4CEE-9F00-F24FC4B1C09A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
