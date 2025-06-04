@@ -1,6 +1,9 @@
-﻿using Aplicacion.WebApi.ViewModels;
+﻿using Aplicacion.WebApi.Presenters;
+using Aplicacion.WebApi.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Test_Tuya.Application;
+using Test_Tuya.Domain.DTOs;
 
 namespace Aplicacion.WebApi.Controllers
 {
@@ -16,7 +19,7 @@ namespace Aplicacion.WebApi.Controllers
         /// Ejecuta el caso de uso principal.
         /// </summary>
         [HttpPost]
-        public ActionResult<ProcessResponseView> Post([FromBody] RequestData request)
+        public ActionResult<ProcessResponsiveView> Post([FromBody] RequestData request)
         {
             ResponseData response = _useCase.Execute(request);
 
