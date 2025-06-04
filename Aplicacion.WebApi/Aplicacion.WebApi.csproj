@@ -10,4 +10,8 @@
     <ProjectReference Include="..\Test_Tuya.Application\Test_Tuya.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Presenters\" />
+  </ItemGroup>
+
 </Project>
