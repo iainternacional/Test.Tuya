@@ -12,7 +12,6 @@
 | **Application**    | C# 12 puro | Casos de uso (`OrderService`) y DTOs                        |
 | **Infrastructure** | EF Core 8  | Persistencia (SQL Server) + implementaciones de repositorios |
 | **Presentation**   | ASP.NET Core 8 Web API | Controladores REST y modelos de vista                   |
-| **Tests**          | xUnit, Moq | *Unit* (Domain / Application) + *Integration* (WebApplicationFactory) |
 
 ---
 
