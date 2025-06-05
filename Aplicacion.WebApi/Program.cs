@@ -1,4 +1,7 @@
 using Aplicacion.WebApi.Presenters;
+using Test_Tuya.Infrastructure;
+using Test_Tuya.Application;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
