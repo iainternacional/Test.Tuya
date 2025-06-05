@@ -39,7 +39,7 @@ git clone (https://github.com/iainternacional/Test.Tuya)
 cd Test_Tuya
 dotnet restore
 
-// src/Test_Tuya.Api/appsettings.Development.json
+// Test_Tuya/Aplicacion.WebApi/appsettings.Development.json
 {
   "ConnectionStrings": {
     "Default": "Server=(localdb)\\MSSQLLocalDB;Database=MyShopDb;Trusted_Connection=True;MultipleActiveResultSets=true"
@@ -49,7 +49,7 @@ dotnet restore
 Add-Migration Initial
 Update-Database
 
-dotnet ef database update --project src\MyShop.Infrastructure --startup-project src\MyShop.Api
+dotnet ef database update --project Test_Tuya\Test_Tuya.Infrastructure --startup-project src\MyShop.Api
 
 
 > MIT © 2025 Andrés Felipe Puerta
