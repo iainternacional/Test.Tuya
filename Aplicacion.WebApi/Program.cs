@@ -3,6 +3,11 @@ using Test_Tuya.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Configuration
+       .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+       .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
+       .AddEnvironmentVariables();
+
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 
@@ -17,7 +22,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/Swagger", () => "Hello World!");
 app.UseHttpsRedirection();
 app.MapControllers();
 

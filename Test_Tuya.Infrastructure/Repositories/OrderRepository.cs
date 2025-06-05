@@ -16,19 +16,19 @@ namespace Test_Tuya.Infrastructure.Repositories
 
         public OrderRepository(AppDbContext db) => _db = db;
 
-        public Task<IReadOnlyList<Order>> GetAllAsync(CancellationToken ct) =>
+        public Task<IReadOnlyList<Order>> GetAllAsync() =>
     _db.Orders.AsNoTracking()
-              .ToListAsync(ct)
-              .ContinueWith(t => (IReadOnlyList<Order>)t.Result, ct);
+              .ToListAsync()
+              .ContinueWith(t => (IReadOnlyList<Order>)t.Result);
 
-        public Task<Order?> GetByIdAsync(Guid id, CancellationToken ct) =>
-            _db.Orders.FindAsync(new object?[] { id }, ct).AsTask();
+        public Task<Order?> GetByIdAsync(Guid id) =>
+            _db.Orders.FindAsync(new object?[] { id }).AsTask();
 
-        public async Task AddAsync(Order order, CancellationToken ct)
-            => await _db.Orders.AddAsync(order, ct);
+        public async Task AddAsync(Order order)
+            => await _db.Orders.AddAsync(order);
 
-        public Task SaveChangesAsync(CancellationToken ct) =>
-            _db.SaveChangesAsync(ct);
+        public Task SaveChangesAsync() =>
+            _db.SaveChangesAsync();
 
         public void Remove(Order order) => _db.Orders.Remove(order);
     }

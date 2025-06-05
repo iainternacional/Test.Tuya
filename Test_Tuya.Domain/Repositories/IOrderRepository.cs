@@ -9,10 +9,10 @@ namespace Test_Tuya.Domain.Repositories
 {
     public interface IOrderRepository
     {
-        Task<IReadOnlyList<Order>> GetAllAsync(CancellationToken ct);
-        Task<Order?> GetByIdAsync(Guid id, CancellationToken ct);
-        Task AddAsync(Order order, CancellationToken ct);
-        Task SaveChangesAsync(CancellationToken ct);
+        Task<IReadOnlyList<Order>> GetAllAsync();
+        Task<Order?> GetByIdAsync(Guid id);
+        Task AddAsync(Order order);
+        Task SaveChangesAsync();
         void Remove(Order order);
     }
 }

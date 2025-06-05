@@ -15,18 +15,18 @@ namespace Test_Tuya.Infrastructure.Repositories
         private readonly AppDbContext _db;
         public CustomerRepository(AppDbContext db) => _db = db;
 
-        public Task<IReadOnlyList<Customer>> GetAllAsync(CancellationToken ct) =>
+        public Task<IReadOnlyList<Customer>> GetAllAsync() =>
     _db.Customers.AsNoTracking()
-              .ToListAsync(ct)
-              .ContinueWith(t => (IReadOnlyList<Customer>)t.Result, ct);
+              .ToListAsync()
+              .ContinueWith(t => (IReadOnlyList<Customer>)t.Result);
 
-        public Task<Customer?> GetByIdAsync(Guid id, CancellationToken ct) =>
-            _db.Customers.FindAsync(new object?[] { id }, ct).AsTask();
+        public Task<Customer?> GetByIdAsync(Guid id) =>
+            _db.Customers.FindAsync(new object?[] { id }).AsTask();
 
-        public async Task AddAsync(Customer customer, CancellationToken ct)
-            => await _db.Customers.AddAsync(customer, ct);
+        public async Task AddAsync(Customer customer)
+            => await _db.Customers.AddAsync(customer);
 
-        public Task SaveChangesAsync(CancellationToken ct) =>
-            _db.SaveChangesAsync(ct);
+        public Task SaveChangesAsync() =>
+            _db.SaveChangesAsync();
     }
 }

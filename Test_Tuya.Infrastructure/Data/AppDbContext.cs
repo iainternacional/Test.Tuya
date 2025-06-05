@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,26 @@ namespace Test_Tuya.Infrastructure.Data
     {
         public DbSet<Customer> Customers => Set<Customer>();
         public DbSet<Order> Orders => Set<Order>();
-        public AppDbContext(DbContextOptions<AppDbContext> o) : base(o) { }
+
+
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            
+                var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production";
+
+                var configuration = new ConfigurationBuilder()
+               .SetBasePath(Directory.GetCurrentDirectory())           // donde se ejecuta la CLI
+               .AddJsonFile("appsettings.json", optional: true)
+               .AddJsonFile($"appsettings.{environment}.json", optional: true)
+               .Build();
+
+                // ――3‒ Aplica la cadena
+                var connectionString = configuration.GetConnectionString("Default");
+                optionsBuilder.UseSqlServer(connectionString);
+            
+        }
         protected override void OnModelCreating(ModelBuilder mb)
         {
             mb.Entity<Customer>(cfg =>
