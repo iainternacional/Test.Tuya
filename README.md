@@ -12,7 +12,6 @@
 | **Application**    | C# 12 puro | Casos de uso (`OrderService`) y DTOs                        |
 | **Infrastructure** | EF Core 8  | Persistencia (SQL Server) + implementaciones de repositorios |
 | **Presentation**   | ASP.NET Core 8 Web API | Controladores REST y modelos de vista                   |
-| **Tests**          | xUnit, Moq | *Unit* (Domain / Application) + *Integration* (WebApplicationFactory) |
 
 ---
 
@@ -39,17 +38,12 @@ git clone (https://github.com/iainternacional/Test.Tuya)
 cd Test_Tuya
 dotnet restore
 
-// Test_Tuya/Aplicacion.WebApi/appsettings.Development.json
+// Test_Tuya/Aplicacion.WebApi/appsettings.json
 {
   "ConnectionStrings": {
     "Default": "Server=(localdb)\\MSSQLLocalDB;Database=MyShopDb;Trusted_Connection=True;MultipleActiveResultSets=true"
   }
 }
-
-Add-Migration Initial
-Update-Database
-
-dotnet ef database update --project Test_Tuya\Test_Tuya.Infrastructure --startup-project src\MyShop.Api
 
 
 > MIT © 2025 Andrés Felipe Puerta
