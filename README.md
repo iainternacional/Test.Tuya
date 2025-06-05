@@ -18,26 +18,7 @@
 
 ## 📁 Estructura de carpetas
 
-El archivo **`MyShop.sln`** en la carpeta raíz ya referencia todos estos proyectos.
-
----
-
-## 1. Requisitos previos
-
-1. **Visual Studio Community 2022 (17.9)+**  
-   - Workload **“ASP.NET y Desarrollo Web”**  
-   - Workload **“.NET Multiplataforma”** (opcional, facilita CLI y pruebas)
-2. **SQL Server Express / LocalDB 2019+** (o el motor que prefieras)  
-3. **.NET SDK 8.0 (LTS)** (se instala con VS, pero confírmalo: *Herramientas ➜ Opciones ➜ SDKs*).
-
----
-
-## 2. Clonar y abrir la solución
-
-```bash
-git clone https://github.com/tu-usuario/MyShop.git
-cd MyShop
-
+El archivo **`Test_Tuya.sln`** en la carpeta raíz ya referencia todos estos proyectos.
 
 ---
 
@@ -54,11 +35,11 @@ cd MyShop
 ## 🚀 Puesta en marcha
 
 ```bash
-git clone [https://github.com/tu-usuario/MyShop.git](https://github.com/iainternacional/Test.Tuya)
-cd MyShop
+git clone (https://github.com/iainternacional/Test.Tuya)
+cd Test_Tuya
 dotnet restore
 
-// src/MyShop.Api/appsettings.Development.json
+// src/Test_Tuya.Api/appsettings.Development.json
 {
   "ConnectionStrings": {
     "Default": "Server=(localdb)\\MSSQLLocalDB;Database=MyShopDb;Trusted_Connection=True;MultipleActiveResultSets=true"
