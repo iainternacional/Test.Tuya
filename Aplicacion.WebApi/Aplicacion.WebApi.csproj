@@ -15,4 +15,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Presenters\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
 </Project>

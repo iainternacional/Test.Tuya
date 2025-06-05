@@ -12,7 +12,6 @@ namespace Test_Tuya.Infrastructure.Data
     {
         public DbSet<Customer> Customers => Set<Customer>();
         public DbSet<Order> Orders => Set<Order>();
-        public DbSet<DataValue> DataValues => Set<DataValue>();
         public AppDbContext(DbContextOptions<AppDbContext> o) : base(o) { }
         protected override void OnModelCreating(ModelBuilder mb)
         {

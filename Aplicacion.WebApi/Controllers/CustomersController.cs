@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Test_Tuya.Application.DTOs;
 using Test_Tuya.Domain.Entities;
 using Test_Tuya.Domain.Repositories;
 
@@ -24,11 +25,10 @@ namespace Aplicacion.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Guid>> Create(
-            [FromBody] string name, [FromBody] string email,
+        public async Task<ActionResult<Guid>> Create(CreateCustomerRequest createCustomerRequest,
             CancellationToken ct)
         {
-            var customer = new Customer(name, email);
+            var customer = new Customer(createCustomerRequest.Name, createCustomerRequest.Email);
             await _repo.AddAsync(customer, ct);
             await _repo.SaveChangesAsync(ct);
             return CreatedAtAction(nameof(Get), new { id = customer.Id }, customer.Id);
